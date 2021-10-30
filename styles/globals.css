@@ -1,0 +1,778 @@
+:root {
+  --main-bg-color: #f94144;
+  --secondary-bg-color: gold;
+}
+
+html,
+body {
+  padding: 0;
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
+    Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+/* Top Nav */
+
+.TopNav {
+	width: 100%;
+	height: 80px;
+	display: flex;
+	align-items: center;
+	justify-content: space-around;
+	box-shadow: 0 4px 6px rgb(194, 194, 194);
+	position: fixed;
+	z-index: 999 !important;
+	background: #fff;
+}
+
+.TopNavClone {
+	width: 100%;
+	height: 80px;
+}
+.logo {
+	width: 150px;
+	height: 70px;
+}
+#logoHide{
+	display: flex;align-items: center;justify-content: center;
+}
+.SearchBox {
+	width: 40%;
+	min-width: 300px;
+	height: 40px;
+	position: relative;
+}
+
+.SearchBox input {
+	width: 100%;
+	height: 100%;
+	border-radius: 50px;
+	padding: 0 10px;
+	font-size: 15px;
+	outline: none;
+	border: 1px solid gray;
+}
+.SearchBox input:focus {
+	border-color: var(--main-bg-color);
+}
+.SearchButton {
+	border-radius: 100% !important;
+	width: 40px !important;
+	height: 40px !important;
+	position: absolute !important;
+	right: 0;
+	top: 0;
+}
+.TopNavButton {
+	display: flex;
+	align-items: center;
+	justify-content: space-around;
+}
+#Cart-num {
+	font-size: 15px;
+}
+ /* Top Nav  */
+
+
+/* Bottom nav */
+.bottonNav {
+	display: none;
+}
+
+@media only screen and (max-width: 768px) {
+
+  .SearchBox{
+		min-width: 200px !important;
+	}
+	.TopNavButton {
+		display: none;
+	}
+
+.bottonNav {
+  width: 100%;
+  height: 60px;
+  display: flex !important;
+  align-items: center;
+  justify-content: space-around;
+  position: fixed;
+  bottom: 0;
+  background: #fff;
+  z-index: 99;
+  box-shadow: 1px 0 8px gray;
+}
+.bottomButton {
+  width: 25%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.bBtn {
+  width: 100%;
+  height: 100%;
+}
+.bottomButton a {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: 13px;
+  text-transform: capitalize;
+  position: relative;
+}
+.bottomButton a img {
+  width: 24px;
+  height: 24px;
+}
+.bottomButton a section {
+  position: absolute;
+  top: -5px;
+  right: 12px;
+  width: 20px;
+  height: 20px;
+  background: #f94144;
+  border-radius: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+}
+
+.newArrivalDiv {
+  margin-top: 20px;
+}
+.cartImg {
+  width: 90%;
+}
+.cartDiv1 {
+  height: 450px !important;
+}
+.cdinfo span {
+  font-size: 11px !important;
+}
+.VendorPageImage{
+  margin-bottom: 10px;
+  
+}
+}
+.desktopNavBtn a {
+  position: relative;
+}
+.desktopNavBtn a section {
+  position: absolute;
+  top: -5px;
+  right: -10px;
+  width: 22px;
+  height: 22px;
+  background: #f94144;
+  font-size: 14px;
+  border-radius: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+}
+/* Bottom nav */
+
+
+/* Post */
+#PostDiv{
+  width: 100%;
+  margin-top: 10px;
+  height: 100vh;
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  padding: 10px;
+  box-sizing: border-box;
+  scroll-behavior: smooth;
+  scroll-snap-type: y mandatory;
+}
+.Post{
+  min-width: 290px;
+  max-width: 300px;
+  height: fit-content;
+  min-height: 100px;
+  box-shadow: 1px 2px 8px #dbdbdb;
+  margin: 20px;
+  border-radius: 15px;
+  transition: all .5s linear;
+  display: flex;align-items: center;justify-content: center;
+  flex-direction: column;
+  scroll-snap-align: center;
+}
+.Post:hover{
+  box-shadow: 1px 2px 8px #fd9b9d;
+}
+.PostUserDetails{
+  width: 90%;
+  margin: auto;
+  display: flex;align-items: center;justify-content: space-between;
+  padding: 10px;
+}
+.PostActions{
+  width: 90%;
+  height: 40px;
+  display: flex;align-items: center;justify-content: flex-end;
+  padding: 10px;
+}
+#PostMsgBtn{
+  width: 150px;
+  /* border: 1px solid gray; */
+  height: 30px;
+  color: gray;
+  display: flex;align-items: center;justify-content: space-between;
+}
+#PostLikeBtn{
+  max-width: 35px !important;
+  max-height: 35px !important;
+  border-radius: 100px;
+  margin: 0 10px;
+}
+.PostContent{
+  width: 100%;
+  min-height: 100px;
+  display: flex;align-items: center;justify-content: center;
+}
+.PostContent pre{
+  width: 95%;
+  line-height: 25px;
+  letter-spacing: 1.5px;
+  font-size: 15px;
+  padding: 5px;
+}
+/* Post */
+
+/* Create Post */
+#AddPost{
+  width: 80%;
+  height: 400px;
+  min-width: 300px;
+  box-shadow: 1px 2px 8px #dbdbdb;
+  margin: 50px auto;
+  border-radius: 20px;
+  display: flex;align-items: center;justify-content: center;
+  flex-direction: column;
+  padding: 20px;
+}
+#AddPost textarea{
+  min-width: 95%;
+  max-width: 95%;
+  max-height: 80%;
+  min-height: 80%;
+  padding: 20px;
+  outline: none;
+  border: 1px solid gray;
+  border-radius: 20px;
+}
+#AddPost textarea:focus{
+  border-color: #f94144;
+}
+#AddPost div{
+  width: 100%;
+  height: 50px;
+  display: flex;align-items: center;justify-content: flex-end;
+  padding: 20px;
+  box-sizing: border-box;
+}
+#AddPostBtn{
+  width: 150px;
+  height: 40px;
+  background: #f94144;
+  color: white;
+}
+/* Create Post */
+
+
+/* Login */
+
+
+.login-div {
+	width: 100vw;
+	height: 100vh;
+	position: fixed;
+	display: flex;
+	align-content: center;
+	justify-content: center;
+	
+}
+.login-div form {
+  width: 40%;
+	min-width: 290px;
+	height: 50%;
+  min-height: 400px;
+	color: gray;
+	margin: 60px auto;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	flex-direction: column;
+	background-color: #fff;
+	border-radius: 20px;
+	position: relative;
+	animation: Login 2s ease infinite;
+	transition: all 0.5s ease;
+  box-shadow: 1px 2px 8px #dbdbdb;
+  z-index: 9999999999999999999;
+}
+.login-div form:nth-child(2) {
+	position: absolute;
+	top: 1%;
+	bottom: 50%;
+	transition: all 0.5s ease;
+}
+.login-div form p {
+	color: hsl(279deg 7% 48%);
+	text-align: center;
+}
+.login-heading {
+	width: 100%;
+	height: 50px;
+	position: absolute;
+  color: #f94144;
+	top: 0;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	font-size: 0.9rem;
+	text-align: center;
+	margin-top: 10px;
+}
+.input-div {
+	width: 80%;
+	height: 70px;
+	display: flex;
+	flex-direction: column;
+}
+.input-div input {
+	height: 35px;
+	outline: none;
+	padding: 0 10px;
+	border:  1px solid gray;
+	border-radius: 10px;
+	font-size: 16px;
+}
+.input-div button {
+	margin: auto;
+	cursor: pointer;
+	
+}
+.otp-input {
+	width: 100%;
+	height: 100px;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+.otp-input input {
+	width: 60%;
+	min-width: 250px;
+	height: 50px;
+	background: transparent;
+	outline: none;
+	border: none;
+	border-bottom: 1px solid white;
+	font-size: 25px;
+	font-weight: 900;
+	letter-spacing: 10px;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	text-align: center;
+}
+input[type="number"]::-webkit-inner-spin-button,
+input[type="number"]::-webkit-outer-spin-button {
+	-webkit-appearance: none;
+	-moz-appearance: none;
+	appearance: none;
+	margin: 0;
+}
+.valid-button {
+	animation: valid 0.5s infinite;
+	animation-delay: 0.5s;
+	transition: all 0.5s ease;
+	width: 50px !important;
+	height: 50px !important;
+	border-radius: 100% !important;
+}
+@keyframes valid {
+	to {
+		transform: rotateZ(180deg);
+	}
+	from {
+		transform: rotateZ(-180deg);
+	}
+}
+
+.show-otp-status {
+	width: 30%;
+	min-width: 200px;
+	height: 50px;
+	display: flex;
+	align-items: center;
+	justify-content: space-around;
+}
+/* Login */
+
+
+/* ChatDiv */
+.ChatDiv{
+  width: 100%;
+  height: 75vh;
+  margin-top: 20px;
+  display: flex;align-items: center;
+}
+.ChatAllUserDiv{
+  width: 30%;
+  height: 100%;
+  
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  overflow-y: scroll;
+  overflow-x: hidden;
+}
+.ChatAllUserDiv::-webkit-scrollbar{
+  display: none;
+}
+.Chatheading{
+  width: 80%;
+  position: absolute;
+  top: 0;
+  margin: auto 30px;
+}
+.ChatUsers{
+  width: 90%;
+  min-height: 50px;
+  transition: all .5s linear;
+  border-radius: 20px;
+  padding: 20px;
+  box-sizing: content-box;
+  display: flex;align-items: center;justify-content: flex-start;
+  margin: -10px 0;
+  background: #fff;
+}
+.ChatUsers:hover{
+  box-shadow: 1px 2px 8px #dbdbdb;
+  z-index: 99;
+  cursor: pointer;
+}
+.ChatUsers span{
+  margin: 0 20px;
+}
+.DetailChatDiv{
+  width: 70%;
+  height: 100%;
+  position: relative;
+}
+.DetailChatHeading{
+  
+  top: 0;
+  width: 90%;
+  height: 50px;
+  margin: auto;
+  padding: 10px;
+  display: flex;align-items: center;justify-content: space-between;
+}
+.DetailChatUser{
+  width: 150px;
+  height: 100%;
+  display: flex;align-items: center;justify-content: flex-start;
+}
+.DetailChatUser span{
+  width: calc(100% - 30px);
+  height: 100%;
+  margin-left: 20px;
+  display: flex;justify-content: center;
+  flex-direction: column;
+}
+.DetailChatUser span p{
+  font-size: 12px;
+}
+.DetailChatFooter{
+  width: 100%;
+  
+  bottom: 0;
+  height: 50px;
+  margin: auto;
+  padding: 0 10px;
+  display: flex;align-items: center;justify-content: space-between;
+}
+.DetailChatForm{
+  width: 100%;
+  height: 100%;
+  display: flex;align-items: center;justify-content: space-around;
+  
+}
+.DetailChatForm input{
+  width: 80%;
+  height: 100%;
+  outline: none;
+  padding: 0 10px;
+  font-size: 18px;
+  flex-direction: row;
+  border: 1px solid #dbdbdb;
+}
+#ChatSendBtn{
+  width: 60px;
+  height: 100%;
+  background: #f94144;
+  color: white;
+}
+.DetailChatsDiv{
+  width: 100%;
+  height: calc(100% - 100px);
+  display: flex;
+  flex-direction: column-reverse;
+  position: relative;
+  overflow-y: scroll;
+}
+.DetailChats{
+  width: 100%;
+  height: auto;
+  padding: 10px;
+  position: relative;
+  
+}
+.DetailChats span{
+  
+  width: auto;
+  max-width: 250px;
+  padding: 10px;
+  min-height: 20px;
+  color: white;
+  border: none;
+  border-radius: 10px;
+}
+.DetailChats img{
+  background: none !important;
+  border: 1px solid gray;
+  border-radius: 100% !important;
+}
+.right{
+  float: right;
+  background: #f94144;
+  border-top-right-radius: 0 !important;
+}
+.left{
+  float: left;
+  background: #dbdbdb;
+  color: black !important;
+  border-top-left-radius: 0 !important;
+}
+@media only screen and (max-width: 500px) {
+  .ChatDiv{
+    max-width: 100vh;
+    overflow-x: scroll;
+    scroll-snap-type: x mandatory;
+    margin-top: 0;
+    transition: all .5s linear;
+    scroll-behavior: smooth;
+  }
+  .ChatAllUserDiv{
+    min-width: 100% !important;
+    
+    scroll-snap-align: center;
+  }
+  .DetailChatDiv{
+    min-width: 100% !important;
+    scroll-snap-align: center;
+  }
+  .DetailChatForm{
+    margin-bottom: 10px;
+  }
+}
+/* ChatDiv */
+
+
+/* Home */
+
+#root {
+	width: 100vw;
+	height: 100vh;
+	
+	display: flex;
+	flex-direction: column;
+}
+.home-one {
+	width: 100%;
+	height: 10%;
+	display: flex;
+	align-items: center;
+	justify-content: flex-end;
+	flex-direction: column;
+	color: hsl(350deg 58% 71%);
+}
+.home-one code{
+  color: #f94144;
+}
+.home-two {
+	width: 100%;
+	height: 20%;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	text-align: center;
+	color: black;
+	font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen,
+		Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+}
+.home-two h1 code {
+	color: #f94144;
+}
+.home-three {
+	width: 100%;
+	height: 40%;
+  display: grid;place-items: center;
+}
+.home-four {
+	width: 100%;
+	height: 10%;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+.home-four p {
+	width: 80%;
+	color: hsl(279deg 7% 48%);
+	text-align: center;
+}
+.home-five {
+	width: 100%;
+	height: 20%;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+#HomeBtn {
+  width: 150px;
+  height: 40px;
+  background: #f94144;
+  color: white;
+}
+
+/* Home */
+
+/* svg */
+.svgClass{
+  
+}
+#StarSvg{
+  width: 100px;
+  position: fixed;
+  animation: starSvg 40s linear infinite;
+  transition: all 10s linear;
+  
+}
+
+@keyframes starSvg {
+  from{
+    margin-left: 102%;
+  }to{
+    margin-right: 110%;
+    transform: rotateZ(-300deg);
+  }
+}
+
+#StarSvg1{
+  width: 50px;
+  position: fixed;
+  top: 200px;
+  animation: starSvg1 40s linear infinite;
+  animation-delay: 5s;
+  transition: all 10s linear;
+  opacity: 0;
+}
+
+@keyframes starSvg1 {
+  from{
+    margin-left: 102%;
+    opacity: 1;
+  }to{
+    margin-right: 110%;
+    opacity: 1;
+    transform: rotateZ(-300deg);
+  }
+}
+
+#StarSvg2{
+  width: 150px;
+  position: fixed;
+  top: 200px;
+  animation: starSvg2 40s linear infinite;
+  animation-delay: 10s;
+  transition: all 10s linear;
+  opacity: 0;
+}
+
+@keyframes starSvg2 {
+  from{
+    margin-left: 102%;
+    opacity: 1;
+    
+  }to{
+    margin-right: 110%;
+    opacity: 1;
+    transform: rotateZ(-300deg);
+    
+  }
+}
+
+#StarSvg3{
+  width: 150px;
+  position: fixed;
+  top: 500px;
+  animation: starSvg3 40s linear infinite;
+  animation-delay: 15s;
+  transition: all 10s linear;
+  opacity: 0;
+}
+
+@keyframes starSvg3 {
+  from{
+    margin-left: 102%;
+    opacity: 1;
+    
+  }to{
+    margin-right: 110%;
+    opacity: 1;
+    transform: rotateZ(-300deg);
+    
+  }
+}
+#StarSvg4{
+  width: 80px;
+  position: fixed;
+  top: 300px;
+  animation: starSvg4 40s linear infinite;
+  animation-delay: 18s;
+  transition: all 10s linear;
+  opacity: 0;
+}
+
+@keyframes starSvg4 {
+  from{
+    margin-left: 102%;
+    opacity: 1;
+    
+  }to{
+    margin-right: 110%;
+    transform: rotateZ(-300deg);
+    opacity: 1;
+    
+  }
+}
+/* svg */
